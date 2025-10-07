@@ -1,37 +1,37 @@
 // Mock data for birthday website
 
 export const birthdayData = {
-  name: "Priya",
+  name: "Sneha",
   
   photos: [
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&q=80",
+      url: "/images/sneha1.jpg",
       caption: "Sunshine moments"
     },
     {
       id: 2,
-      url: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80",
+      url: "/images/sneha2.jpg",
       caption: "Adventure time"
     },
     {
       id: 3,
-      url: "https://images.unsplash.com/photo-1521093470119-a3acdc43374a?w=800&q=80",
+      url: "/images/sneha3.jpg",
       caption: "Best vibes"
     },
     {
       id: 4,
-      url: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80",
+      url: "/images/sneha4.jpg",
       caption: "Golden hour"
     },
     {
       id: 5,
-      url: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=800&q=80",
+      url: "/images/sneha5.jpg",
       caption: "Beautiful memories"
     },
     {
       id: 6,
-      url: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=800&q=80",
+      url: "/images/sneha6.jpg",
       caption: "Sweet smiles"
     }
   ],
@@ -84,7 +84,7 @@ export const birthdayData = {
   wishes: [
     {
       id: 1,
-      author: "Gopi Krishna",
+      author: "GK",
       wish: "Happy Birthday to the most amazing person I know! You light up every room you walk into and make everyone's day brighter. May this year bring you endless joy, success, and all the happiness you deserve!"
     },
     {

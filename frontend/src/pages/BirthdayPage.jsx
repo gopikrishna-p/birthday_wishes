@@ -128,18 +128,18 @@ const BirthdayPage = () => {
           
           {/* Carousel */}
           <div className="relative mb-12">
-            <div className="carousel-container relative h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+            <div className="carousel-container relative rounded-3xl overflow-hidden shadow-2xl bg-gray-100">
               {birthdayData.photos.map((photo, index) => (
                 <div
                   key={photo.id}
-                  className={`carousel-slide absolute inset-0 transition-all duration-1000 ${
-                    index === currentPhotoIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+                  className={`carousel-slide transition-all duration-1000 ${
+                    index === currentPhotoIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-95 absolute inset-0'
                   }`}
                 >
                   <img
                     src={photo.url}
                     alt={photo.caption}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain max-h-[500px] md:max-h-[600px] mx-auto"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8">
                     <p className="text-white text-2xl font-light text-center">{photo.caption}</p>
@@ -180,55 +180,6 @@ const BirthdayPage = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Memories Timeline Section */}
-      <section id="memories" className="memories-section py-24 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="section-title text-5xl md:text-6xl font-bold text-center text-blue-600 mb-20">
-            Our Journey Together
-          </h2>
-          
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-400 via-cyan-500 to-blue-600 hidden md:block"></div>
-            
-            <div className="space-y-16">
-              {birthdayData.memories.map((memory, index) => {
-                const Icon = iconMap[memory.icon] || Heart;
-                return (
-                  <div
-                    key={memory.id}
-                    className={`memory-card flex flex-col md:flex-row items-center gap-8 ${
-                      index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                    }`}
-                  >
-                    {/* Content */}
-                    <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'} text-center md:text-inherit`}>
-                      <Card className="memory-card-inner p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-blue-100">
-                        <CardContent className="p-0">
-                          <div className="text-blue-500 text-xl font-bold mb-2">{memory.year}</div>
-                          <h3 className="text-2xl font-bold text-gray-800 mb-4">{memory.title}</h3>
-                          <p className="text-gray-600 leading-relaxed">{memory.description}</p>
-                        </CardContent>
-                      </Card>
-                    </div>
-                    
-                    {/* Icon */}
-                    <div className="relative z-10">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center shadow-lg">
-                        <Icon className="w-10 h-10 text-white" />
-                      </div>
-                    </div>
-                    
-                    {/* Spacer */}
-                    <div className="flex-1 hidden md:block"></div>
-                  </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </section>
@@ -277,7 +228,7 @@ const BirthdayPage = () => {
           <p className="text-2xl md:text-3xl font-light mb-6">
             Made with <Heart className="inline-block w-8 h-8 text-red-300 heartbeat mx-2" /> by your best friend
           </p>
-          <p className="text-3xl md:text-4xl font-bold">Gopi Krishna</p>
+          <p className="text-3xl md:text-4xl font-bold">GK</p>
           <div className="mt-8 flex justify-center gap-4">
             <Sparkles className="w-6 h-6 animate-pulse" />
             <Cake className="w-6 h-6 animate-bounce" />
